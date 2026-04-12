@@ -1,0 +1,40 @@
+🔹 1. Program Design
+1.The program is designed using a modular approach
+2.Each task is divided into separate functions:
+3.showRules()
+4.checkSpeed()
+5.checkHelmet()
+6.checkSeatbelt()
+
+🔹 2. User Interaction
+1.A menu-driven system is used
+2.User selects options (1–5)
+3.Program runs continuously using a loop (do-while) until exit
+
+🔹 3. Input Collection
+1.User inputs:
+2.Choice (menu)
+3.Speed value
+4.Helmet (1/0)
+5.Seatbelt (1/0)
+
+🔹 4. Processing Logic
+1.The program uses conditional statements (if-else):
+2.Speed ≤ 60 → Safe
+3.60–80 → Fine ₹500
+4.80 → Fine ₹1000
+5.Helmet/Seatbelt:
+6.Yes → No fine
+7.No → Fine ₹500
+
+🔹 5. Output Display
+1.Displays:
+a.Traffic rules
+b.Fine messages
+c.Safety messages
+d.Results are shown immediately after input
+
+🔹 6. Program Control
+1.main() function controls the entire flow
+2.Uses switch-case to call required functions
+3.Loop continues until user selects Exit

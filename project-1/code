@@ -1,56 +1,77 @@
-#include<stdio.h>
-int main()
-{
-    int a[3][3], b[3][3], c[3][3], i, j;
+#include <stdio.h>
 
-    printf("Enter the first matrix elements:\n");
-    for(i=0;i<3;i++)
-    {
-        for(j=0;j<3;j++)
-        {
-            scanf("%d",&a[i][j]);
-        }
-    }
+// Function to display rules
+void showRules() {
+    printf("\n=== TRAFFIC RULES ===\n");
+    printf("1. Wear helmet while riding\n");
+    printf("2. Wear seatbelt in car\n");
+    printf("3. Follow speed limits\n");
+    printf("4. Do not use mobile while driving\n");
+    printf("5. Follow traffic signals\n");
+}
 
-    printf("The first matrix is:\n");
-    for(i=0;i<3;i++)
-    {
-        for(j=0;j<3;j++)
-        {
-            printf("%d ",a[i][j]);
-        }
-        printf("\n");
-    }
+// Function to check speed violation
+void checkSpeed() {
+    int speed;
+    printf("\nEnter your vehicle speed: ");
+    scanf("%d", &speed);
 
-    printf("Enter the second matrix elements:\n");
-    for(i=0;i<3;i++)
-    {
-        for(j=0;j<3;j++)
-        {
-            scanf("%d",&b[i][j]);
-        }
+    if (speed <= 60) {
+        printf("✅ Safe driving. No fine.\n");
+    } else if (speed > 60 && speed <= 80) {
+        printf("⚠️ Over speed! Fine: Rs. 500\n");
+    } else {
+        printf("🚫 Dangerous driving! Fine: Rs. 1000\n");
     }
+}
 
-    printf("The second matrix is:\n");
-    for(i=0;i<3;i++)
-    {
-        for(j=0;j<3;j++)
-        {
-            printf("%d ",b[i][j]);
-        }
-        printf("\n");
-    }
+// Function to check helmet
+void checkHelmet() {
+    int helmet;
+    printf("\nAre you wearing helmet? (1-Yes / 0-No): ");
+    scanf("%d", &helmet);
 
-    printf("Addition of two matrices is:\n");
-    for(i=0;i<3;i++)
-    {
-        for(j=0;j<3;j++)
-        {
-            c[i][j] = a[i][j] + b[i][j];
-            printf("%d ",c[i][j]);
+    if (helmet == 1)
+        printf("✅ Good! No fine.\n");
+    else
+        printf("🚫 Helmet not worn! Fine: Rs. 500\n");
+}
+
+// Function to check seatbelt
+void checkSeatbelt() {
+    int belt;
+    printf("\nAre you wearing seatbelt? (1-Yes / 0-No): ");
+    scanf("%d", &belt);
+
+    if (belt == 1)
+        printf("✅ Good! No fine.\n");
+    else
+        printf("🚫 Seatbelt not worn! Fine: Rs. 500\n");
+}
+
+int main() {
+    int choice;
+
+    do {
+        printf("\n=== TRAFFIC MANAGEMENT SYSTEM ===\n");
+        printf("1. Show Traffic Rules\n");
+        printf("2. Check Speed\n");
+        printf("3. Check Helmet\n");
+        printf("4. Check Seatbelt\n");
+        printf("5. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1: showRules(); break;
+            case 2: checkSpeed(); break;
+            case 3: checkHelmet(); break;
+            case 4: checkSeatbelt(); break;
+            case 5: printf("Exiting...\n"); break;
+            default: printf("Invalid choice!\n");
         }
-        printf("\n");
-    }
+
+    } while (choice != 5);
 
     return 0;
 }

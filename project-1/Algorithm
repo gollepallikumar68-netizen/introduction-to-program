@@ -1,0 +1,36 @@
+🔹 Step 1: Start the program
+
+🔹 Step 2: Display menu options
+1.Show Traffic Rules
+2.Check Speed
+3.Check Helmet
+4.Check Seatbelt
+5.Exit
+
+🔹 Step 3: Read user choice
+
+🔹 Step 4: Check user choice using switch-case
+➤ Case 1: Show Rules
+Call showRules()
+Display all traffic rules
+➤ Case 2: Check Speed
+Input speed
+If speed ≤ 60 → Display “Safe”
+Else if speed ≤ 80 → Display “Fine ₹500”
+Else → Display “Fine ₹1000”
+➤ Case 3: Check Helmet
+Input helmet (1/0)
+If 1 → No fine
+Else → Fine ₹500
+➤ Case 4: Check Seatbelt
+Input seatbelt (1/0)
+If 1 → No fine
+Else → Fine ₹500
+➤ Case 5: Exit
+Terminate program
+➤ Default
+Display “Invalid choice”
+
+🔹 Step 5: Repeat steps 2–4 until user selects Exit
+
+🔹 Step 6: Stop the program
